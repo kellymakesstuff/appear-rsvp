@@ -28,10 +28,9 @@ APPEAR is a full-service, customizable wedding RSVP app, complete with household
 
 ## MVP and Goals
 
-- User can register for an account using household code on paper invitation
+- User can access household RSVP entry using household code on paper invitation
 - User can RSVP and designate attendance, contact info, etc for each individual guest
 - User can specify entrée order and dietary restrictions
-- User can add pictures and label with guest names from household
 - User can view larger gallery of all included photos
 
 <br>
@@ -144,7 +143,7 @@ The backend will be built with Ruby on Rails and PostgreSQL.
 ***
 
 ## Post-MVP
-- Each individual guest can register as users to share pictures
+- User can add pictures and label with guest names from household
 - Integrating QR code that routes to the correct household code
 - Guests can add songs to requests playlist
 - Guests receive emails to confirm registration, RSVP and order submission
