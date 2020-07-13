@@ -54,7 +54,7 @@ APPEAR is a full-service, customizable wedding RSVP app, complete with household
 
 #### Wireframes
 
-![APPEAR wireframes](https://i.imgur.com/ab4v1nV.png)
+![APPEAR wireframes](https://i.imgur.com/rXtodyb.png)
 
 #### Component Tree
 
@@ -134,7 +134,7 @@ All components will be functional components utilizing React Hooks for passing o
 
 #### ERD Model
 
-![APPEAR ERD](https://i.imgur.com/BTT8yRi.png)
+![APPEAR ERD](https://i.imgur.com/ab4v1nV.png)
 
 The backend will be built with Ruby on Rails and PostgreSQL.
 
