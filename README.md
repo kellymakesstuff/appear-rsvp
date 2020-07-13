@@ -115,7 +115,7 @@ All components will be functional components utilizing React Hooks for passing o
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Backend boilerplate    |    H     |     1 hrs      |     TBD     |    3 hrs    |
+| Backend boilerplate    |    H     |     1 hrs      |     TBD     |    TBD    |
 | Frontend boilerplate |    H     |     1 hrs      |     TBD     |     TBD     |
 | Build API services and functions    |    H     |     3 hrs      |     TBD     |    TBD    |
 | Build full backend and deploy    |    H     |     4 hrs      |     TBD     |    TBD    |
@@ -157,8 +157,8 @@ The backend will be built with Ruby on Rails and PostgreSQL.
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+To be updated upon app completion. 
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+To be updated upon app completion. 
