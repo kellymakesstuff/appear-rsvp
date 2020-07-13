@@ -55,11 +55,11 @@ APPEAR is a full-service, customizable wedding RSVP app, complete with household
 
 #### Wireframes
 
-![APPEAR wireframes](https://i.imgur.com/xWRKkji.png)
+![APPEAR wireframes](https://i.imgur.com/ab4v1nV.png)
 
 #### Component Tree
 
-![APPEAR Component Tree](https://i.imgur.com/roCva9A.png)
+![APPEAR Component Tree](https://i.imgur.com/oXNHzF5.png)
 
 #### Component Hierarchy
 
@@ -76,8 +76,7 @@ src
       |__ shared/
         |__ Header.jsx
       |__ Register.jsx
-      |__ Login.jsx
-      |__ Main.jsx
+      |__ AccessCode.jsx
       |__ RSVP.jsx
       |__ SingleGuest.jsx
       |__ SingleOrder.jsx
@@ -99,8 +98,7 @@ All components will be functional components utilizing React Hooks for passing o
 | :----------:   | :--------------------------------------- |
 |    Header      | Banner with Login and Register options |
 |    Main        | Main component to house state declaration |
-|    Register    | Allows user to register their code to an account |
-|    Login       | Allows user to login to existing account |
+|    AccessCode    | Allows user to access household via unique code |
 |    RSVP        | Allows user to complete RSVP for all household |
 |    SingleGuest | Component with options for each guest |
 |    SingleOrder | Component with each guest's food order |
@@ -119,7 +117,7 @@ All components will be functional components utilizing React Hooks for passing o
 | Frontend boilerplate |    H     |     1 hrs      |     TBD     |     TBD     |
 | Build API services and functions    |    H     |     3 hrs      |     TBD     |    TBD    |
 | Build full backend and deploy    |    H     |     4 hrs      |     TBD     |    TBD    |
-| Build login and register components    |    M     |     2 hrs      |     TBD     |    TBD    |
+| Build AccessCode component    |    M     |     2 hrs      |     TBD     |    TBD    |
 | Header styling    |    M     |     2 hrs      |     TBD    |    TBD    |
 | Build SinglePhoto component    |    M     |     3 hrs      |     TBD     |    TBD   |
 | Build and style gallery    |    L     |     6 hrs      |     TBD     |    TBD    |
