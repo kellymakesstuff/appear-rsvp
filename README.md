@@ -21,7 +21,7 @@
 
 ## Overview
 
-APPEAR is a full-service, customizable wedding RSVP app, complete with household and guest management, response tracking, food ordering and specifications,  and more. APPEAR integrates easily with a household code on your paper invitations for a smooth and green RSVP experience. Let your guests upload photos with the bride and groom before, during, and after the big day! 
+APPEAR is a full-service, customizable wedding RSVP app, complete with household and guest management, response tracking, food ordering and specifications,  and more. APPEAR integrates easily with a household code on your paper invitations for a smooth and green RSVP experience. Let your guests upload photos with the lucky couple before, during, and after the big day! 
 
 
 <br>
