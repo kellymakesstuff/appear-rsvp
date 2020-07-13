@@ -42,11 +42,12 @@ APPEAR is a full-service, customizable wedding RSVP app, complete with household
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-|   Axios   | _Lorem ipsum dolor sit amet, consectetur._ |
-| Ruby on Rails | _Lorem ipsum dolor sit amet, consectetur._ |
-|     React Bootstrap      | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Front-end built with React utlizing Hooks |
+|   React Router   | Router used for scaleable linking |
+|   Axios   | Axios used to access deployed backend |
+| Ruby on Rails | Rails with PostgreSQL database for backend |
+|     CSS Grid      | Grid for main styling for three devices |
+|     React Bootstrap      | Bootstrap used for extended responsive design |
 
 <br>
 
@@ -114,20 +115,20 @@ All components will be functional components utilizing React Hooks for passing o
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Backend boilerplate    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Frontend boilerplate |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Build API services and functions    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Build full backend and deploy    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Build login and register components    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Header styling    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Build SinglePhoto component    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Build and style gallery    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Build RSVP view    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Build order view    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Build AddPhoto view    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Media queries    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Full styling    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Backend boilerplate    |    H     |     1 hrs      |     TBD     |    3 hrs    |
+| Frontend boilerplate |    H     |     1 hrs      |     TBD     |     TBD     |
+| Build API services and functions    |    H     |     3 hrs      |     TBD     |    TBD    |
+| Build full backend and deploy    |    H     |     4 hrs      |     TBD     |    TBD    |
+| Build login and register components    |    M     |     2 hrs      |     TBD     |    TBD    |
+| Header styling    |    M     |     2 hrs      |     TBD    |    TBD    |
+| Build SinglePhoto component    |    M     |     3 hrs      |     TBD     |    TBD   |
+| Build and style gallery    |    L     |     6 hrs      |     TBD     |    TBD    |
+| Build RSVP view    |    H     |     6 hrs      |     TBD     |    TBD    |
+| Build order view    |    H     |     6 hrs      |     TBD     |    TBD    |
+| Build AddPhoto view    |    H     |     4 hrs      |     TBD     |    TBD    |
+| Media queries    |    M     |     6 hrs      |     TBD     |    TBD    |
+| Full styling    |    H    |     4 hrs      |     TBD     |    TBD    |
+| TOTAL               |          |     48 hrs      |     TBD     |     TBD     |
 
 
 <br>
