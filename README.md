@@ -127,7 +127,6 @@ All components will be functional components utilizing React Hooks for passing o
 | Build AddPhoto view    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
 | Media queries    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
 | Full styling    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
 
