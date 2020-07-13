@@ -28,11 +28,11 @@ APPEAR is a full-service, customizable wedding RSVP app, complete with household
 
 ## MVP and Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- User can register for an account using household code on paper invitation
+- User can RSVP and designate attendance, contact info, etc for each individual guest
+- User can specify entrée order and dietary restrictions
+- User can add pictures and label with guest names from household
+- User can view larger gallery of all included photos
 
 <br>
 
@@ -114,8 +114,20 @@ All components will be functional components utilizing React Hooks for passing o
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Backend boilerplate    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Frontend boilerplate |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Build API services and functions    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Build full backend and deploy    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Build login and register components    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Header styling    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Build SinglePhoto component    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Build and style gallery    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Build RSVP view    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Build order view    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Build AddPhoto view    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Media queries    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Full styling    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
 
@@ -134,7 +146,11 @@ The backend will be built with Ruby on Rails and PostgreSQL.
 ***
 
 ## Post-MVP
-
+- Each individual guest can register as users
+- Guests can add songs to requests playlist
+- Guests receive emails to confirm registration, RSVP and order submission
+- Admin account for hosts
+- Hosts can download Excel file of guests, guest info, order info
 
 
 ***
