@@ -3,8 +3,7 @@
 
 
 - [Overview](#overview)
-- [MVP](#mvp)
-  - [Goals](#goals)
+- [MVP](#mvp and Goals)
   - [Libraries and Dependencies](#libraries-and-dependencies)
   - [Client (Front End)](#client-front-end)
     - [Wireframes](#wireframes)
@@ -27,12 +26,7 @@ APPEAR is a full-service, customizable wedding RSVP app, complete with household
 
 <br>
 
-## MVP
-
-
-<br>
-
-### Goals
+## MVP and Goals
 
 - _Lorem ipsum, dolor sit amet,_
 - _consectetur adipiscing elit._
@@ -64,7 +58,7 @@ APPEAR is a full-service, customizable wedding RSVP app, complete with household
 
 #### Component Tree
 
-
+![APPEAR Component Tree](https://i.imgur.com/roCva9A.png)
 
 #### Component Hierarchy
 
@@ -74,26 +68,45 @@ APPEAR is a full-service, customizable wedding RSVP app, complete with household
 
 src
 |__ assets/
-      |__ fonts
       |__ graphics
       |__ images
       |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ shared/
+        |__ Header.jsx
+      |__ Register.jsx
+      |__ Login.jsx
+      |__ Main.jsx
+      |__ RSVP.jsx
+      |__ SingleGuest.jsx
+      |__ SingleOrder.jsx
+      |__ AddPhoto.jsx
+      |__ Gallery.jsx
+      |__ SinglePhoto.jsx
+
 |__ services/
+      |__ ApiHelper.js
+      |__ CRUDFunctions.js
 
 ```
 
 #### Component Breakdown
 
+All components will be functional components utilizing React Hooks for passing of state and props.
 
-|  Component   |    Type    | state | props | Description                                                      |
-| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|  Component     | Description                              |
+| :----------:   | :--------------------------------------- |
+|    Header      | Banner with Login and Register options |
+|    Main        | Main component to house state declaration |
+|    Register    | Allows user to register their code to an account |
+|    Login       | Allows user to login to existing account |
+|    RSVP        | Allows user to complete RSVP for all household |
+|    SingleGuest | Component with options for each guest |
+|    SingleOrder | Component with each guest's food order |
+|    AddPhoto    | User can add photos to main gallery |
+|    Gallery     | Main gallery that maps SinglePhoto |
+|    SinglePhoto | Single instance of photo from database |
+
 
 #### Time Estimates
 
