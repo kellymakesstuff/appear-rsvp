@@ -2,8 +2,8 @@
 
 one:
   photo_url: MyString
-  guest: one
+  household: one
 
 two:
   photo_url: MyString
-  guest: two
+  household: two
