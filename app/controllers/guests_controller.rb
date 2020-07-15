@@ -48,6 +48,6 @@ class GuestsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def guest_params
-      params.require(:guest).permit(:first_name, :surname, :phone, :email, :under10, :attending, :household_id)
+      params.require(:guest).permit(:first_name, :surname, :attending, :under10, :phone, :email, :household_id)
     end
 end
