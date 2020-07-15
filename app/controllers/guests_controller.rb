@@ -1,19 +1,24 @@
 class GuestsController < ApplicationController
-  before_action :set_guest, only: [:show, :household_index, :update, :destroy]
+  before_action :set_guest, only: [:show, :update, :destroy]
 
   # GET /guests
   def index
+    if params[:household_id]
+    @household = Household.find(params[:household_id])
+    render json: @household.guests, include: :order 
+    else
     @guests = Guest.all
 
     render json: @guests, include: :order
+    end
   end
 
-  # GET /households/1/guests
-  def household_index
-    @guests = Guest.where("household_id = ?", params[:household_id])
+  # # GET /households/1/guests
+  # def household_index
+  #   @guests = Guest.where("household_id = ?", params[:household_id])
 
-    render json: @guests, include: :order
-  end
+  #   render json: @guests, include: :order
+  # end
 
   # GET /guests/1
   def show

@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
-  resources :households, only: [:index, :show, :create, :update, :destroy] do
-    resources :guests, only: [:show, :create, :update, :destroy] do
-      resources :orders, only: [:index, :show, :create, :update, :destroy]
+  resources :households do
+    resources :guests  do
+      resources :orders
     end
   end
-  resources :photos, only: [:index, :show, :create, :update, :destroy]
+  resources :photos
+  resources :guests, only: :index
 
-get '/households/:id/guests', to: 'guests#household_index'
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

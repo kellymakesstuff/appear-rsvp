@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_07_14_215001) do
     t.string "surname"
     t.boolean "attending"
     t.boolean "under10"
-    t.integer "phone"
+    t.bigint "phone"
     t.string "email"
     t.bigint "household_id", null: false
     t.datetime "created_at", precision: 6, null: false

@@ -5,7 +5,7 @@ class CreateGuests < ActiveRecord::Migration[6.0]
       t.string :surname
       t.boolean :attending
       t.boolean :under10
-      t.integer :phone
+      t.bigint :phone
       t.string :email
       t.references :household, null: false, foreign_key: true
 
