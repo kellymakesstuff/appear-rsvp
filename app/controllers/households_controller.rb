@@ -10,14 +10,24 @@ class HouseholdsController < ApplicationController
 
   # GET /households/1
   def show
-    render json: @household
+    render json: @household, include: :guests
   end
 
   # POST /households
+
+  def new
+    @household = Household.new
+  end
+
+  def edit
+    @household = Household.find(params[:id])
+    end
+
   def create
-    @household = Household.new(book_params)
+    @household = Household.new(household_params)
+
     if @household.save
-      render json: @household, status: :created
+      render json: @household, status: :created, location: @household
     else
       render json: @household.errors, status: :unprocessable_entity
     end
