@@ -5,7 +5,7 @@ class HouseholdsController < ApplicationController
   def index
     @households = Household.all
 
-    render json: @households
+    render json: @households, include: :guests
   end
 
   # GET /households/1
@@ -36,7 +36,7 @@ class HouseholdsController < ApplicationController
   # PATCH/PUT /households/1
   def update
     if @household.update(household_params)
-      render json: @household
+      render json: @household, include: :guests
     else
       render json: @household.errors, status: :unprocessable_entity
     end
