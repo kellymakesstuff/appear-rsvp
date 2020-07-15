@@ -15,10 +15,9 @@ class HouseholdsController < ApplicationController
 
   # POST /households
   def create
-    @household = Household.new(household_params)
-
+    @household = Household.new(book_params)
     if @household.save
-      render json: @household, status: :created, location: @household
+      render json: @household, status: :created
     else
       render json: @household.errors, status: :unprocessable_entity
     end

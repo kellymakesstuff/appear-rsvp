@@ -14,11 +14,13 @@ class GuestsController < ApplicationController
   end
 
   # POST /guests
-  def create
-    @guest = Guest.new(guest_params)
 
+  def create
+    @guest = Guest.new(book_params)
+    @household= Household.find(params[:household_id])
+    @guest.household = @household
     if @guest.save
-      render json: @guest, status: :created, location: @guest
+      render json: @guest, status: :created
     else
       render json: @guest.errors, status: :unprocessable_entity
     end
