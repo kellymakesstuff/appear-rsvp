@@ -13,16 +13,16 @@ class GuestsController < ApplicationController
     end
   end
 
-  # # GET /households/1/guests
-  # def household_index
-  #   @guests = Guest.where("household_id = ?", params[:household_id])
-
-  #   render json: @guests, include: :order
-  # end
 
   # GET /guests/1
+  
   def show
+    if params[:household_id]
+    @household = Household.find(params[:household_id])
+    render json: @household.guests, include: :order 
+    else
     render json: @guest, include: :order
+    end
   end
 
   # POST /guests
@@ -32,7 +32,7 @@ class GuestsController < ApplicationController
     @household= Household.find(params[:household_id])
     @guest.household = @household
     if @guest.save
-      render json: @guest , include: :households, status: :created
+      render json: @guest , include: :household, status: :created
     else
       render json: @guest.errors, status: :unprocessable_entity
     end

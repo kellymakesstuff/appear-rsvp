@@ -3,14 +3,20 @@ class OrdersController < ApplicationController
 
   # GET /orders
   def index
+    if params[:guest_id]
+      @guest = Guest.find(params[:guest_id])
+      render json: @guest.order
+      else
     @orders = Order.all
 
     render json: @orders
+      end
   end
 
   # GET /orders/1
   def show
-    render json: @order
+      @guest = Guest.find(params[:guest_id])
+    render json: @guest.order
   end
 
   # POST /orders
