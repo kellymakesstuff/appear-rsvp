@@ -47,6 +47,9 @@ class HouseholdsController < ApplicationController
     @household.destroy
   end
 
+  def welcome
+    render "hi"
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_household
