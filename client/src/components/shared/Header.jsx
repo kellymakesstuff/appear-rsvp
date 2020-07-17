@@ -7,5 +7,6 @@ export default function Header() {
     // <div>
     //   <img src={HeadCut} alt="APPEAR" />
     // </div>
+    <h1>header here</h1>
   )
 }
