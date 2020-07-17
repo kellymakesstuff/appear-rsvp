@@ -11,7 +11,9 @@ export default function App() {
 
   let apiCall = async () => {
     let householdData = await axios('https://salty-taiga-76954.herokuapp.com/households')
-    console.log(householdData)
+
+    setHouseholds(householdData.data)
+    console.log(households)
   }
 
   useEffect(() => {
@@ -21,6 +23,7 @@ export default function App() {
   return <>
     <h1>in App</h1>
     <Header />
+    {/* might need a guard operator for householdData/household hook here */}
     <Main />
   </>
 }
