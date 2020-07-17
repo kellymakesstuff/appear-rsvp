@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  entree: MyString
+  allergies: MyString
+  guest: one
+
+two:
+  entree: MyString
+  allergies: MyString
+  guest: two
