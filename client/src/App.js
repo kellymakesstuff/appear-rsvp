@@ -10,7 +10,7 @@ export default function App() {
   let [households, setHouseholds] = useState([])
 
   let apiCall = async () => {
-    let householdData = await axios(api)
+    let householdData = await axios('https://salty-taiga-76954.herokuapp.com/households')
     console.log(householdData)
   }
 
