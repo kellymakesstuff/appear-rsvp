@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 
 export default function AccessCode({ access, setAccess }) {
@@ -9,7 +9,7 @@ export default function AccessCode({ access, setAccess }) {
     <div>
       <h1>access code</h1>
       <form>
-        <input type="text" onChange={e => console.log(e.target.value)} />
+        <input type="text" onChange={e => { setAccess(e.target.value) }} />
       </form>
     </div>
   )

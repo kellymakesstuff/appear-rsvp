@@ -27,8 +27,7 @@ export default function Main(
 
     <Route path="/accesscode">
       <AccessCode
-        access={access}
-        setAcess={setAccess} />
+        access={access} setAcess={setAccess} />
     </Route>
 
 
