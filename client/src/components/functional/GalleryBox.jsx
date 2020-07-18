@@ -9,13 +9,8 @@ export default function GalleryBox({ photos }) {
 
 
   return <>
-    {let new = [
 
-    ]
-
-    }
-
-    <div>
+    <div className="fullGalleryBox">
       <Gallery photos={photos} />
     </div>
   </>
