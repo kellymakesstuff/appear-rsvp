@@ -1,6 +1,19 @@
 @import './boilerplate.scss';
 
-body {
+.headerImg {
   background-color: $pink_hi;
+  height: 167px
+}
 
+.headerBox {
+  display: flex;
+  flex-flow: row;
+  justify-self: flex-end;
+ background-color: $pink_hi;
+width: 100%; 
+
+}
+
+.headerLinks {
+  text-align: right;
 }

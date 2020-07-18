@@ -1,13 +1,17 @@
 import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import AccessCode from './AccessCode'
-import Gallery from '../functional/Gallery'
+import GalleryBox from '../functional/GalleryBox'
+import RSVP from '../views/RSVP'
+
 
 export default function Main(
   { households, setHouseholds,
+    currentHouse, setCurrentHouse,
     guests, setGuests,
     photos, setPhotos,
-    access, setAccess }) {
+    banana, setBanana,
+    toMain, setToMain }) {
 
   console.log("households", households)
   console.log("guests", guests)
@@ -17,20 +21,34 @@ export default function Main(
   return <>
     <div>
       <h2>in Main</h2>
+
     </div>
 
 
 
     <Route path="/" exact>
-      <Gallery />
+      <GalleryBox />
     </Route>
 
     <Route path="/accesscode">
       <AccessCode
-        access={access}
-        setAcess={setAccess} />
+        households={households}
+        setHouseholds={setHouseholds}
+        banana={banana}
+        setBanana={setBanana}
+        toMain={toMain}
+        setToMain={setToMain}
+        currentHouse={currentHouse}
+        setCurrentHouse={setCurrentHouse} />
     </Route>
 
+    <Route path="/household">
+      <RSVP
+        households={households}
+        setHouseholds={setHouseholds}
+        currentHouse={currentHouse}
+        setCurrentHouse={setCurrentHouse} />
+    </Route>
 
 
   </>

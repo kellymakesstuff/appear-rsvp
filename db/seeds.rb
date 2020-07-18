@@ -37,11 +37,15 @@ Photo.destroy_all
 
 Order.create!([{entree:"filet mignon", allergies:"none", guest:@AlvarezBob}, {entree:"filet mignon", allergies:"shellfish", guest:@AssamJasmine}, {entree:"filet mignon", allergies:"none", guest:@BeckamShelly}, {entree:"filet mignon", allergies:"shrimp", guest:@WakamatsuLena}, {entree:"filet mignon", allergies:"none", guest:@LeedMary}, {entree:"filet mignon", allergies:"green beans", guest:@AlvarezSuzy}, {entree:"filet mignon", allergies:"none", guest:@BeckamTim}, {entree:"filet mignon", allergies:"mushrooms", guest:@GiordanaWendy}, {entree:"filet mignon", allergies:"none", guest:@LiuJason}, {entree:"filet mignon", allergies:"none", guest:@MireldaLila}])
 
-Photo.create!(photo_url:"testtttt", household_id:@alvarez.id)
-Photo.create!(photo_url:"testtttt", household_id:@liu.id)
-Photo.create!(photo_url:"testtttt", household_id:@assam.id)
-Photo.create!(photo_url:"testtttt", household_id:@assam.id)
-Photo.create!(photo_url:"testtttt", household_id:@beckam.id)
-Photo.create!(photo_url:"testtttt", household_id:@leed.id)
-Photo.create!(photo_url:"testtttt", household_id:@wakamatsu.id)
-
+Photo.create!(photo_url:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/jackie_jennifer.JPG", household_id:@giordana.id)
+Photo.create!(photo_url:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/jackie_lila.JPG", household_id:@mirelda.id)
+Photo.create!(photo_url:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/jackie_dara.JPG", household_id:@assam.id)
+Photo.create!(photo_url:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/jackie_shelly.JPEG", household_id:@beckam.id)
+Photo.create!(photo_url:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/all_monique.JPG", household_id:@beckam.id)
+Photo.create!(photo_url:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/jackie_wendy.JPG", household_id:@giordana.id)
+Photo.create!(photo_url:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/jackie_lena.JPG", household_id:@wakamatsu.id)
+Photo.create!(photo_url:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/wilson_bob.JPG", household_id:@alvarez.id)
+Photo.create!(photo_url:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/wilson_frank.JPG", household_id:@leed.id)
+Photo.create!(photo_url:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/wilson_jake.JPG", household_id:@mirelda.id)
+Photo.create!(photo_url:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/wilson_jason.JPG", household_id:@liu.id)
+Photo.create!(photo_url:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/wilson_mike.JPG", household_id:@johnson.id)
