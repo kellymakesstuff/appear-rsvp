@@ -51,7 +51,9 @@ ActiveRecord::Schema.define(version: 2020_07_14_215001) do
   end
 
   create_table "photos", force: :cascade do |t|
-    t.string "photo_url"
+    t.string "src"
+    t.integer "width"
+    t.integer "height"
     t.bigint "household_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
