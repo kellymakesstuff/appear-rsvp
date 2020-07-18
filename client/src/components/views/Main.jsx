@@ -27,7 +27,7 @@ export default function Main(
 
 
     <Route path="/" exact>
-      <GalleryBox />
+      <GalleryBox photos={photos} />
     </Route>
 
     <Route path="/accesscode">
