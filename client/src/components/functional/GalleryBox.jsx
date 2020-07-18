@@ -1,5 +1,6 @@
 import React from 'react'
 import Gallery from 'react-photo-gallery';
+import '../css/gallerybox.scss'
 
 export default function GalleryBox({ photos }) {
 
