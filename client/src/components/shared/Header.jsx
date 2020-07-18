@@ -9,13 +9,15 @@ export default function Header({ setToMain, banana, currentHouse, setCurrentHous
   console.log("currentHouse in Header", currentHouse, setCurrentHouse)
 
   return <>
+
     <div className="headerBox">
 
       <img className="headerImg" src={HeadCut} alt="APPEAR" />
 
+
       <div className="headerLinks">
         <Link to="/accesscode" onClick={() => setToMain(false)}>Access Code</Link>
-        {currentHouse && <Link to="/household">|| Welcome, {currentHouse.surname} family</Link>}
+        {currentHouse && <Link to="/household"> || Welcome, {currentHouse.surname} family</Link>}
       </div>
 
     </div>

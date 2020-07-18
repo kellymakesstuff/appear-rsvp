@@ -1,6 +1,9 @@
 @import './boilerplate.scss';
 
 .fullGalleryBox {
-  text-align: center;
-width: 60%
+margin: 0 auto;
+padding: 20px 20px 20px 20px;
+width: 60%;
+border: solid $orange_hi;
+@include shadow;
 }
