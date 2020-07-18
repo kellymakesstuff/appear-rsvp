@@ -59,7 +59,6 @@ export default function App() {
   }, [])
 
   return <>
-    <h1>in App</h1>
     <Header
       setToMain={setToMain}
       households={households}

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import AccessCode from './AccessCode'
-import Gallery from '../functional/Gallery'
+import GalleryBox from '../functional/GalleryBox'
 import RSVP from '../views/RSVP'
 
 
@@ -27,7 +27,7 @@ export default function Main(
 
 
     <Route path="/" exact>
-      <Gallery />
+      <GalleryBox />
     </Route>
 
     <Route path="/accesscode">
