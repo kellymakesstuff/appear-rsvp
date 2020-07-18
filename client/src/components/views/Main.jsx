@@ -7,7 +7,8 @@ export default function Main(
   { households, setHouseholds,
     guests, setGuests,
     photos, setPhotos,
-    access, setAccess }) {
+    banana, setBanana,
+    toMain, setToMain }) {
 
   console.log("households", households)
   console.log("guests", guests)
@@ -17,6 +18,7 @@ export default function Main(
   return <>
     <div>
       <h2>in Main</h2>
+
     </div>
 
 
@@ -27,7 +29,10 @@ export default function Main(
 
     <Route path="/accesscode">
       <AccessCode
-        access={access} setAcess={setAccess} />
+        banana={banana}
+        setBanana={setBanana}
+        toMain={toMain}
+        setToMain={setToMain} />
     </Route>
 
 

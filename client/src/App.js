@@ -7,16 +7,24 @@ import Header from './components/shared/Header'
 import Main from './components/views/Main'
 
 export default function App() {
-
+  // States with all-data
   let [households, setHouseholds] = useState([])
   let [guests, setGuests] = useState([])
   let [orders, setOrders] = useState([])
   let [photos, setPhotos] = useState([])
-  let [access, setAccess] = useState("")
+  let [banana, setBanana] = useState(null)
+
+  //redirects
+  let [toMain, setToMain] = useState(false)
 
   let householdCall = async () => {
-    let householdData = await axios('https://salty-taiga-76954.herokuapp.com/households')
-    setHouseholds(householdData.data)
+    if (banana) {
+      let householdData = await axios(`https://salty-taiga-76954.herokuapp.com/households/${parseInt(banana)}`)
+      setHouseholds(householdData.data)
+    } else {
+      let householdData = await axios(`https://salty-taiga-76954.herokuapp.com/households/`)
+      setHouseholds(householdData.data)
+    }
 
   }
 
@@ -49,13 +57,16 @@ export default function App() {
 
   return <>
     <h1>in App</h1>
-    <Header />
+    <Header setToMain={setToMain} />
     {/* might need a guard operator for householdData/household hook here */}
     <Main
       households={households}
       guests={guests}
       photos={photos}
-      access={access} />
+      banana={banana}
+      setBanana={setBanana}
+      toMain={toMain}
+      setToMain={setToMain} />
 
   </>
 }

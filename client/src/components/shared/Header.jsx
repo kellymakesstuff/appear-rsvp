@@ -4,12 +4,12 @@ import { HeadCut } from '../images/appear_header_cut_high.png'
 import '../css/header.scss'
 
 
-export default function Header() {
+export default function Header({ setToMain }) {
 
 
   return <>
 
-    <Link to="/accesscode">Access Code</Link>
+    <Link to="/accesscode" onClick={() => setToMain(false)}>Access Code</Link>
 
   </>
 }
