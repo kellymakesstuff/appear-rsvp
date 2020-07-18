@@ -14,6 +14,9 @@ export default function App() {
   let [photos, setPhotos] = useState([])
   let [banana, setBanana] = useState(null)
 
+  // states that change 
+  let [currentHouse, setCurrentHouse] = useState(null)
+
   //redirects
   let [toMain, setToMain] = useState(false)
 
@@ -57,10 +60,20 @@ export default function App() {
 
   return <>
     <h1>in App</h1>
-    <Header setToMain={setToMain} />
+    <Header
+      setToMain={setToMain}
+      households={households}
+      setHouseholds={setHouseholds}
+      banana={banana}
+      currentHouse={currentHouse}
+      setCurrentHouse={setCurrentHouse}
+    />
     {/* might need a guard operator for householdData/household hook here */}
     <Main
       households={households}
+      setHouseholds={setHouseholds}
+      currentHouse={currentHouse}
+      setCurrentHouse={setCurrentHouse}
       guests={guests}
       photos={photos}
       banana={banana}
