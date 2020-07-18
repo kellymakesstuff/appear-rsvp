@@ -10,7 +10,7 @@ export default function RSVP({ households, currentHouse, setCurrentHouse }) {
 
   return (
     <div>
-      <h1>in RSVP</h1>
+
 
       {currentHouse &&
         <div>

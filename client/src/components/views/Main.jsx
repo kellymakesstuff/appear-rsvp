@@ -19,12 +19,6 @@ export default function Main(
 
 
   return <>
-    <div>
-      <h2>in Main</h2>
-
-    </div>
-
-
 
     <Route path="/" exact>
       <GalleryBox photos={photos} />
