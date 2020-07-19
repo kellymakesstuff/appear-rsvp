@@ -17,18 +17,24 @@ export default function AddPhoto({ banana, photos, setPhotos }) {
     household_id: parsedBanana
   })
 
-  let handleNewPhoto = (e) =>
+  let handleNewPhoto = (e) => {
+    let imgUrl = `"${e}"`
+    let heightNum = 4
+    let widthNum = 3
+
     setNewPhoto({
-      src: e,
-      height: 4,
-      width: 3,
+      src: imgUrl,
+      height: heightNum,
+      width: widthNum,
       household_id: parsedBanana
     })
+
+  }
+
 
   let submitNewPhoto = () => {
     console.log(newPhoto)
     addPhoto(newPhoto)
-    setPhotos(photos, newPhoto)
   }
 
   return <>
