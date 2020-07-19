@@ -21,13 +21,13 @@ export default function App() {
   let [toMain, setToMain] = useState(false)
 
   let householdCall = async () => {
-    if (banana) {
-      let householdData = await axios(`https://salty-taiga-76954.herokuapp.com/households/${parseInt(banana)}`)
-      setHouseholds(householdData.data)
-    } else {
-      let householdData = await axios(`https://salty-taiga-76954.herokuapp.com/households/`)
-      setHouseholds(householdData.data)
-    }
+    // if (banana) {
+    //   let householdData = await axios(`https://salty-taiga-76954.herokuapp.com/households/${parseInt(banana)}`)
+    //   setHouseholds(householdData.data)
+    // } else {
+    let householdData = await axios(`https://salty-taiga-76954.herokuapp.com/households/`)
+    setHouseholds(householdData.data)
+    // }
 
   }
 
@@ -49,13 +49,32 @@ export default function App() {
 
   }
 
+  let checkAccess = async () => {
+    let code = localStorage.getItem("banana")
+    if (code) {
+      let householdData = await axios(`https://salty-taiga-76954.herokuapp.com/households/`)
+      console.log(householdData, "house data here")
+      await setHouseholds(householdData.data)
+      await setBanana(code)
+      console.log("here", households, "code", code)
+      setCurrentHouse(householdData.data[code - 1])
+      setToMain(true)
+    }
+  }
 
 
   useEffect(() => {
-    householdCall()
-    guestCall()
-    // orderCall()
-    photoCall()
+    let allCalls = async () => {
+      await checkAccess()
+      // await householdCall()
+      await guestCall()
+      // orderCall()
+      await photoCall()
+
+
+    }
+    allCalls()
+
   }, [])
 
   return <>
