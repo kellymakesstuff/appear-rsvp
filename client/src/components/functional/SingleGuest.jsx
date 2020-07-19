@@ -2,17 +2,26 @@ import React, { useState, useEffect } from 'react'
 import '../css/singleguest.scss'
 
 export default function SingleGuest({ currentHouse, guest }) {
-  let [editToggle, setEditToggle] = useState(null)
-  let [singleGuest, setSingleGuest] = useState({
-    [name]: [value]
-  })
+  let [editToggle, setEditToggle] = useState(true)
+  let [singleGuest, setSingleGuest] = useState({})
 
+  // {
+  //   [name]: [value]
+  // }
 
-
-  return <div className="box">
-    <div className="guestBox">
-
-      <div className="singleGuest">
+  let openFields = () => {
+    if (editToggle) {
+      return <div className="singleGuest">
+        <input name="first_name" value={guest.first_name} onChange={(e) => handleEdit(e.target.value)} />
+        <input name="surname" value={guest.surname} onChange={(e) => handleEdit(e.target.value)} />
+        <input name="phone" value={guest.phone} onChange={(e) => handleEdit(e.target.value)} />
+        <input name="email" value={guest.email} onChange={(e) => handleEdit(e.target.value)} />
+        <input name="attending" value={guest.attending} onChange={(e) => handleEdit(e.target.value)} />
+        <input name="under10" value={guest.under10} onChange={(e) => handleEdit(e.target.value)} />
+        <button onClick={() => setEditToggle(null)}>Submit</button>
+      </div>
+    } else {
+      return <div className="singleGuest">
         <h2>{guest.first_name}</h2>
         <h2>{guest.surname}</h2>
         <h2>{guest.phone}</h2>
@@ -21,18 +30,21 @@ export default function SingleGuest({ currentHouse, guest }) {
         <h2>{guest.under10}</h2>
         <button onClick={() => setEditToggle(true)}>Edit</button>
       </div>
+    }
+  }
 
-      {editToggle &&
-        <div className="singleGuest">
-          <input name={first_name} value={guest.first_name} />
-          <input name={surname} value={guest.surname} />
-          <input name={phone} value={guest.phone} />
-          <input name={email} value={guest.email} />
-          <input name={attending} value={guest.attending} />
-          <input name={under10} value={guest.under10} />
-        </div>
-        <button onClick={() => setEditToggle(null)}>Submit</button>
-      }
+  let handleEdit = (e) => {
+    setSingleGuest(...singleGuest, {
+      e
+    })
+    console.log("singleGuest", singleGuest)
+    setEditToggle(null)
+  }
+
+  return <div className="box">
+    <div className="guestBox">
+
+      {openFields()}
 
     </div>
   </div>
