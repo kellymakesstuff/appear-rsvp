@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import AccessCode from './AccessCode'
 import GalleryBox from '../functional/GalleryBox'
+import AddPhoto from '../functional/AddPhoto'
 import RSVP from '../views/RSVP'
 
 
@@ -41,9 +42,17 @@ export default function Main(
         households={households}
         setHouseholds={setHouseholds}
         currentHouse={currentHouse}
-        setCurrentHouse={setCurrentHouse} />
+        setCurrentHouse={setCurrentHouse}
+        banana={banana}
+        setBanana={setBanana} />
     </Route>
 
+    <Route path="/addphoto">
+      <AddPhoto
+        banana={banana}
+        photos={photos}
+        setPhotos={setPhotos} />
+    </Route>
 
   </>
 }

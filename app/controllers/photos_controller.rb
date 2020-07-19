@@ -46,6 +46,6 @@ class PhotosController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def photo_params
-      params.require(:photo).permit(:photo_url, :household_id)
+      params.require(:photo).permit(:src, :height, :width, :household_id)
     end
 end

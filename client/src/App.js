@@ -31,11 +31,6 @@ export default function App() {
 
   }
 
-  let guestCall = async () => {
-    let guestData = await axios('https://salty-taiga-76954.herokuapp.com/guests')
-    setGuests(guestData.data)
-
-  }
 
   // let orderCall = async () => {
   //   let orderData = await axios('https://salty-taiga-76954.herokuapp.com/orders')
@@ -67,7 +62,7 @@ export default function App() {
     let allCalls = async () => {
       await checkAccess()
       // await householdCall()
-      await guestCall()
+      // await guestCall()
       // orderCall()
       await photoCall()
 

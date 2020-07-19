@@ -4,7 +4,7 @@ let apiUrl
 
 const apiUrls = {
   production: 'https://salty-taiga-76954.herokuapp.com/',
-  development: 'http://localhost:3000/'
+  development: 'https://salty-taiga-76954.herokuapp.com/'
 }
 
 if (window.location.hostname === 'localhost') {
