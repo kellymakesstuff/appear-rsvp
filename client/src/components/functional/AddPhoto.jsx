@@ -44,9 +44,6 @@ export default function AddPhoto({ banana, photos, setPhotos }) {
   }
 
 
-
-
-
   return <>
     <div>
       <h1>photosss</h1>

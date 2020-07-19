@@ -38,7 +38,6 @@ Photo.destroy_all
 Order.create!([{entree:"filet mignon", allergies:"none", guest:@AlvarezBob}, {entree:"filet mignon", allergies:"shellfish", guest:@AssamJasmine}, {entree:"filet mignon", allergies:"none", guest:@BeckamShelly}, {entree:"filet mignon", allergies:"shrimp", guest:@WakamatsuLena}, {entree:"filet mignon", allergies:"none", guest:@LeedMary}, {entree:"filet mignon", allergies:"green beans", guest:@AlvarezSuzy}, {entree:"filet mignon", allergies:"none", guest:@BeckamTim}, {entree:"filet mignon", allergies:"mushrooms", guest:@GiordanaWendy}, {entree:"filet mignon", allergies:"none", guest:@LiuJason}, {entree:"filet mignon", allergies:"none", guest:@MireldaLila}])
 
 Photo.create!(src:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/jackie_jennifer.JPG", width:4, height:3, household_id:@giordana.id)
-Photo.create!(src:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/jackie_lila.JPG", width:3, height:4, household_id:@mirelda.id)
 Photo.create!(src:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/jackie_dara.JPG", width:3, height:4, household_id:@assam.id)
 Photo.create!(src:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/jackie_shelly.JPEG", width:3, height:4, household_id:@beckam.id)
 Photo.create!(src:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/all_monique.JPG", width:6, height:3, household_id:@beckam.id)
@@ -48,4 +47,5 @@ Photo.create!(src:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp
 Photo.create!(src:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/wilson_frank.JPG", width:4, height:5, household_id:@leed.id)
 Photo.create!(src:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/wilson_jake.JPG", width:3, height:4, household_id:@mirelda.id)
 Photo.create!(src:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/wilson_jason.JPG", width:4, height:5, household_id:@liu.id)
-Photo.create!(src:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/wilson_mike.JPG", width:3, height:3, household_id:@johnson.id)
+Photo.create!(src:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/wilson_mike.JPG", width:3, height:4, household_id:@johnson.id)
+Photo.create!(src:"https://raw.githubusercontent.com/kellymakesstuff/appear-rsvp/dev/client/src/components/images/mock_photos/jackie_lila.JPG", width:3, height:4, household_id:@mirelda.id)
