@@ -3,14 +3,13 @@ Rails.application.routes.draw do
 
 
   resources :households do
-    resources :guests  do
-    end
+    resources :guests 
 
   end
  
   resources :photos
+  
   resources :guests do
-
     resources :orders
   end
 
