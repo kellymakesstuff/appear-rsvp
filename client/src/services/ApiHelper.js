@@ -15,3 +15,8 @@ export const addGuest = async (id, guestInfo) => {
   const response = await api.post(`/households/${id}/guests`, { guest: guestInfo })
   return response.data
 }
+
+export const addPhoto = async (photoData) => {
+  const response = await api.post('/photos', { photo: photoData })
+  return response.data
+}
