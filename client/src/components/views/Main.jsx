@@ -12,7 +12,8 @@ export default function Main(
     guests, setGuests,
     photos, setPhotos,
     banana, setBanana,
-    toMain, setToMain }) {
+    toMain, setToMain,
+    isLoading, setIsLoading }) {
 
   console.log("households", households)
   console.log("guests", guests)
@@ -44,14 +45,20 @@ export default function Main(
         currentHouse={currentHouse}
         setCurrentHouse={setCurrentHouse}
         banana={banana}
-        setBanana={setBanana} />
+        setBanana={setBanana}
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
+        photos={photos}
+        setPhotos={setPhotos} />
     </Route>
 
     <Route path="/addphoto">
       <AddPhoto
         banana={banana}
         photos={photos}
-        setPhotos={setPhotos} />
+        setPhotos={setPhotos}
+        isLoading={isLoading}
+        setIsLoading={setIsLoading} />
     </Route>
 
   </>
