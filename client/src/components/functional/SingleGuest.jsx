@@ -24,6 +24,7 @@ export default function SingleGuest({ currentHouse, guest,
 
   }
 
+
   let handleSubmit = () => {
     console.log("Submit singleGuest", singleGuest)
     setEditToggle(null)
