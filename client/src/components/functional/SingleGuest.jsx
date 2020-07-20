@@ -53,7 +53,7 @@ export default function SingleGuest({ currentHouse, guest,
         <label for="attending">"Yes, I'll be there!"</label>
         <input name="attending" type="radio" value="false" onChange={(e) => handleEdit(e)} />
         <label for="attending">"No, I can't be there!"</label>
-        {/* <input name="under10" value={guest.under10} type="checkbox" value="true" onChange={(e) => handleEdit(e)} /> */}
+        <input name="under10" value={guest.under10} type="checkbox" value="true" onChange={(e) => handleEdit(e)} />
 
         <button onClick={() => handleSubmit()}>Submit</button>
 
@@ -66,7 +66,7 @@ export default function SingleGuest({ currentHouse, guest,
         <h2>{singleGuest.phone}</h2>
         <h2>{singleGuest.email}</h2>
         <h2>{singleGuest.attending}</h2>
-        {/* <h2>{guest.under10}</h2> */}
+        <h2>{guest.under10}</h2>
         <button onClick={() => setEditToggle(true)}>Edit</button>
       </div>
     }
