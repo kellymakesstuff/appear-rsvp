@@ -11,6 +11,7 @@ export default function RSVP({ households,
   // console.log("currentHouse in RSVP", currentHouse.id)
 
   let [allGuests, setAllGuests] = useState([])
+  let [singleGuest, setSingleGuest] = useState({})
 
   let allGuestCall = async () => {
     let guestData = await axios(`https://salty-taiga-76954.herokuapp.com/households/${banana}/guests`)
@@ -40,7 +41,9 @@ export default function RSVP({ households,
         </div>}
 
 
-      {allGuests && allGuests.map(guest => <SingleGuest guest={guest} />)}
+      {allGuests && allGuests.map(guest => <SingleGuest guest={guest}
+        allGuests={allGuests} setAllGuests={setAllGuests}
+        singleGuest={singleGuest} setSingleGuest={setSingleGuest} />)}
 
       {/* {allGuests && <AddPhoto
         banana={banana}

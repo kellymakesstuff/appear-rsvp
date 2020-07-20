@@ -1,24 +1,47 @@
 import React, { useState, useEffect } from 'react'
 import '../css/singleguest.scss'
 
-export default function SingleGuest({ currentHouse, guest }) {
-  let [editToggle, setEditToggle] = useState(true)
-  let [singleGuest, setSingleGuest] = useState({})
+export default function SingleGuest({ currentHouse, guest,
+  allGuests, setAllGuests,
+  singleGuest, setSingleGuest }) {
 
-  // {
-  //   [name]: [value]
-  // }
+
+  let [editToggle, setEditToggle] = useState(true)
+
+  console.log("all guests in single guest", allGuests)
+  console.log("single guests in single guest", singleGuest)
+
+  let handleEdit = (e) => {
+    console.log(e.target)
+    const { name, value } = e.target
+    setSingleGuest({
+      singleGuest,
+      id: guest.id,
+      household_id: guest.household_id,
+      [name]: value
+    })
+    console.log("singleGuest", singleGuest)
+
+  }
+
+  let handleSubmit = () => {
+    console.log("Submit singleGuest", singleGuest)
+    setEditToggle(null)
+  }
 
   let openFields = () => {
     if (editToggle) {
       return <div className="singleGuest">
-        <input name="first_name" value={guest.first_name} onChange={(e) => handleEdit(e.target.value)} />
-        <input name="surname" value={guest.surname} onChange={(e) => handleEdit(e.target.value)} />
-        <input name="phone" value={guest.phone} onChange={(e) => handleEdit(e.target.value)} />
-        <input name="email" value={guest.email} onChange={(e) => handleEdit(e.target.value)} />
-        <input name="attending" value={guest.attending} onChange={(e) => handleEdit(e.target.value)} />
-        <input name="under10" value={guest.under10} onChange={(e) => handleEdit(e.target.value)} />
-        <button onClick={() => setEditToggle(null)}>Submit</button>
+        <input name="first_name" value={guest.first_name} onChange={(e) => handleEdit(e)} />
+        <input name="surname" value={guest.surname} onChange={(e) => handleEdit(e)} />
+        <input name="phone" value={guest.phone} onChange={(e) => handleEdit(e)} />
+        <input name="email" value={guest.email} onChange={(e) => handleEdit(e)} />
+        <input name="attending" type="radio" value="true" onChange={(e) => console.log(e.target.value)} />
+        <label for="attending">"Yes, I'll be there!"</label>
+        <input name="attending" type="radio" value="false" onChange={(e) => console.log(e.target.value)} />
+        <label for="attending">"No, I can't be there!"</label>
+        {/* <input name="under10" value={guest.under10} onChange={(e) => handleEdit(e.target.value)} /> */}
+        <button onClick={() => handleSubmit()}>Submit</button>
       </div>
     } else {
       return <div className="singleGuest">
@@ -33,13 +56,7 @@ export default function SingleGuest({ currentHouse, guest }) {
     }
   }
 
-  let handleEdit = (e) => {
-    setSingleGuest(...singleGuest, {
-      e
-    })
-    console.log("singleGuest", singleGuest)
-    setEditToggle(null)
-  }
+
 
   return <div className="box">
     <div className="guestBox">
