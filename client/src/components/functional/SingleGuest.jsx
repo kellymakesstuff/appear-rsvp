@@ -11,7 +11,12 @@ export default function SingleGuest({ currentHouse, guest,
     (state, newState) => ({ ...state, ...newState }),
     {
       first_name: guest.first_name,
-      surname: guest.surname
+      surname: guest.surname,
+      phone: guest.phone,
+      email: guest.email,
+      attending: guest.attending,
+      under10: guest.under10
+
     }
   )
 
@@ -40,15 +45,15 @@ export default function SingleGuest({ currentHouse, guest,
   let openFields = () => {
     if (editToggle) {
       return <div className="singleGuest">
-        <input name="first_name" value={guest.first_name} onChange={(e) => handleEdit(e)} />
-        <input name="surname" value={guest.surname} onChange={(e) => handleEdit(e)} />
-        {/* // <input name="phone" value={guest.phone} onChange={(e) => handleEdit(e)} />
-          // <input name="email" value={guest.email} onChange={(e) => handleEdit(e)} />
-          // <input name="attending" type="radio" value="true" onChange={(e) => console.log(e.target.value)} />
-          // <label for="attending">"Yes, I'll be there!"</label>
-          // <input name="attending" type="radio" value="false" onChange={(e) => console.log(e.target.value)} />
-          // <label for="attending">"No, I can't be there!"</label> */}
-        {/* <input name="under10" value={guest.under10} onChange={(e) => handleEdit(e.target.value)} /> */}
+        <input name="first_name" value={singleGuest.first_name} onChange={(e) => handleEdit(e)} />
+        <input name="surname" value={singleGuest.surname} onChange={(e) => handleEdit(e)} />
+        <input name="phone" value={singleGuest.phone} onChange={(e) => handleEdit(e)} />
+        <input name="email" value={singleGuest.email} onChange={(e) => handleEdit(e)} />
+        <input name="attending" type="radio" value="true" onChange={(e) => handleEdit(e)} />
+        <label for="attending">"Yes, I'll be there!"</label>
+        <input name="attending" type="radio" value="false" onChange={(e) => handleEdit(e)} />
+        <label for="attending">"No, I can't be there!"</label>
+        {/* <input name="under10" value={guest.under10} type="checkbox" value="true" onChange={(e) => handleEdit(e)} /> */}
 
         <button onClick={() => handleSubmit()}>Submit</button>
 
@@ -56,12 +61,12 @@ export default function SingleGuest({ currentHouse, guest,
       </div >
     } else {
       return <div className="singleGuest">
-        <h2>{guest.first_name}</h2>
-        <h2>{guest.surname}</h2>
-        <h2>{guest.phone}</h2>
-        <h2>{guest.email}</h2>
-        <h2>{guest.attending}</h2>
-        <h2>{guest.under10}</h2>
+        <h2>{singleGuest.first_name}</h2>
+        <h2>{singleGuest.surname}</h2>
+        <h2>{singleGuest.phone}</h2>
+        <h2>{singleGuest.email}</h2>
+        <h2>{singleGuest.attending}</h2>
+        {/* <h2>{guest.under10}</h2> */}
         <button onClick={() => setEditToggle(true)}>Edit</button>
       </div>
     }
