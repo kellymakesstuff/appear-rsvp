@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, withRouter } from 'react-router-dom'
 import axios from 'axios'
 
-export default function AccessCode({
+function AccessCode({
   households, setHouseholds,
   banana, setBanana,
   toMain, setToMain,
@@ -41,5 +41,4 @@ export default function AccessCode({
   </>
 }
 
-
-// () => setToMain(true)
+export default withRouter(AccessCode)

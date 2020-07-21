@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import HeadCut from '../images/appear_header_cut_high.png'
+import { withRouter } from 'react-router-dom'
 import '../css/header.scss'
 
 
-export default function Header({ setToMain, banana, currentHouse, setCurrentHouse }) {
+function Header({ setToMain, banana, currentHouse, setCurrentHouse }) {
 
   console.log("currentHouse in Header", currentHouse, setCurrentHouse)
 
@@ -23,3 +24,5 @@ export default function Header({ setToMain, banana, currentHouse, setCurrentHous
     </div>
   </>
 }
+
+export default withRouter(Header)

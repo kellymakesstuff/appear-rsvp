@@ -2,30 +2,32 @@ import React, { useState, useEffect } from 'react'
 import SingleGuest from '../functional/SingleGuest'
 import axios from 'axios'
 import AddPhoto from '../functional/AddPhoto'
+import { withRouter } from 'react-router-dom'
 
-export default function RSVP({ households,
+function RSVP({ households,
   currentHouse, setCurrentHouse,
   banana, photos, setPhotos,
   allGuests, setAllGuests,
-  isLoading, setIsLoading }) {
+  isLoading, setIsLoading, match }) {
 
 
 
   console.log("currentHouse in RSVP", currentHouse)
   console.log("allGuests in RSVP", allGuests)
-  console.log("params", banana)
+  console.log("params", match.params.banana)
 
   // let [allGuests, setAllGuests] = useState([])
 
 
   let allGuestCall = async () => {
-    let guestData = await axios(`https://salty-taiga-76954.herokuapp.com/households/${banana}/guests`)
+    let guestData = await axios(`https://salty-taiga-76954.herokuapp.com/households/${match.params.banana}/guests`)
     setAllGuests(guestData.data)
 
   }
 
   useEffect(() => {
     allGuestCall()
+
 
   }, [])
 
@@ -61,3 +63,5 @@ export default function RSVP({ households,
     </div>
   )
 }
+
+export default withRouter(RSVP)
