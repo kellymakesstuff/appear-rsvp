@@ -7,6 +7,8 @@ export default function SingleGuest({ currentHouse, guest,
 
 
   let [editToggle, setEditToggle] = useState(true)
+  let [viewToggle, setViewToggle] = useState(true)
+
   let [singleGuest, setSingleGuest] = useReducer(
     (state, newState) => ({ ...state, ...newState }),
     {
@@ -23,6 +25,7 @@ export default function SingleGuest({ currentHouse, guest,
 
 
   console.log("all guests in single guest", allGuests)
+  console.log("currentHouse in single guest", currentHouse)
   console.log("single guests in single guest", singleGuest)
 
   let handleEdit = (e) => {
@@ -45,6 +48,7 @@ export default function SingleGuest({ currentHouse, guest,
   let handleDelete = () => {
     let lookupId = guest.id
     deleteGuest(lookupId)
+    setViewToggle(null)
     setEditToggle(null)
   }
 
@@ -65,6 +69,9 @@ export default function SingleGuest({ currentHouse, guest,
         <button onClick={() => handleDelete()}>Delete</button>
 
       </div >
+    } else if (!viewToggle) {
+      return <p>Guest deleted</p>
+
     } else {
       return <div className="singleGuest">
         <h2>{singleGuest.first_name}</h2>
