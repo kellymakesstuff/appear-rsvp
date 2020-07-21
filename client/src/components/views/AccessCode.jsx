@@ -30,7 +30,7 @@ export default function AccessCode({
   }
 
   return <>
-    {toMain ? <Redirect to="/household" /> : null}
+    {toMain ? <Redirect to={`/household/${banana}`} /> : null}
     <div>
       <h1>access code</h1>
       <form onSubmit={() => handleGuests()}>

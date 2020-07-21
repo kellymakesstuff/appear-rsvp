@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Link, Route, useParams } from 'react-router-dom'
 import AccessCode from './AccessCode'
 import GalleryBox from '../functional/GalleryBox'
 import AddPhoto from '../functional/AddPhoto'
@@ -39,7 +39,7 @@ export default function Main(
         setAllGuests={setAllGuests} />
     </Route>
 
-    <Route path="/household">
+    <Route path="/household/:banana">
       <RSVP
         households={households}
         setHouseholds={setHouseholds}

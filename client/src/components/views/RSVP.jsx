@@ -9,7 +9,11 @@ export default function RSVP({ households,
   allGuests, setAllGuests,
   isLoading, setIsLoading }) {
 
-  // console.log("currentHouse in RSVP", currentHouse.id)
+
+
+  console.log("currentHouse in RSVP", currentHouse)
+  console.log("allGuests in RSVP", allGuests)
+  console.log("params", banana)
 
   // let [allGuests, setAllGuests] = useState([])
 
@@ -21,7 +25,9 @@ export default function RSVP({ households,
   }
 
   useEffect(() => {
-    allGuestCall()
+    if (banana) {
+      allGuestCall()
+    }
 
   }, [])
 

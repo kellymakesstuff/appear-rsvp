@@ -17,7 +17,7 @@ export default function Header({ setToMain, banana, currentHouse, setCurrentHous
 
       <div className="headerLinks">
         <Link to="/accesscode" onClick={() => setToMain(false)}>Access Code</Link>
-        {currentHouse && <Link to="/household" > || Welcome, {currentHouse.surname} family</Link>}
+        {currentHouse && <Link to={`/household/${banana}`}> || Welcome, {currentHouse.surname} family</Link>}
       </div>
 
     </div>
