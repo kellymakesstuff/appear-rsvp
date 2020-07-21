@@ -9,14 +9,13 @@ import RSVP from '../views/RSVP'
 export default function Main(
   { households, setHouseholds,
     currentHouse, setCurrentHouse,
-    guests, setGuests,
+    allGuests, setAllGuests,
     photos, setPhotos,
     banana, setBanana,
     toMain, setToMain,
     isLoading, setIsLoading }) {
 
   console.log("households", households)
-  console.log("guests", guests)
   console.log("photos", photos)
 
 
@@ -35,7 +34,9 @@ export default function Main(
         toMain={toMain}
         setToMain={setToMain}
         currentHouse={currentHouse}
-        setCurrentHouse={setCurrentHouse} />
+        setCurrentHouse={setCurrentHouse}
+        allGuests={allGuests}
+        setAllGuests={setAllGuests} />
     </Route>
 
     <Route path="/household">
@@ -49,7 +50,9 @@ export default function Main(
         isLoading={isLoading}
         setIsLoading={setIsLoading}
         photos={photos}
-        setPhotos={setPhotos} />
+        setPhotos={setPhotos}
+        allGuests={allGuests}
+        setAllGuests={setAllGuests} />
     </Route>
 
     <Route path="/addphoto">

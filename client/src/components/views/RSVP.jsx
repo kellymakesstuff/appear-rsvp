@@ -6,11 +6,12 @@ import AddPhoto from '../functional/AddPhoto'
 export default function RSVP({ households,
   currentHouse, setCurrentHouse,
   banana, photos, setPhotos,
+  allGuests, setAllGuests,
   isLoading, setIsLoading }) {
 
   // console.log("currentHouse in RSVP", currentHouse.id)
 
-  let [allGuests, setAllGuests] = useState([])
+  // let [allGuests, setAllGuests] = useState([])
 
 
   let allGuestCall = async () => {
@@ -24,7 +25,7 @@ export default function RSVP({ households,
 
   }, [])
 
-
+  //trynow
 
   return (
     <div>
@@ -42,7 +43,7 @@ export default function RSVP({ households,
 
 
       {allGuests && allGuests.map(guest => <SingleGuest guest={guest}
-        allGuests={allGuests} setAllGuests={setAllGuests}
+        allGuests={allGuests} setAllGuests={setAllGuests} currentHouse={currentHouse}
       />)}
 
       {/* {allGuests && <AddPhoto

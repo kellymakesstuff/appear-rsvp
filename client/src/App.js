@@ -9,7 +9,7 @@ import Main from './components/views/Main'
 export default function App() {
   // States with all-data
   let [households, setHouseholds] = useState([])
-  let [guests, setGuests] = useState([])
+  let [allGuests, setAllGuests] = useState([])
   let [orders, setOrders] = useState([])
   let [photos, setPhotos] = useState([])
   let [banana, setBanana] = useState(null)
@@ -32,6 +32,11 @@ export default function App() {
 
   }
 
+  let allGuestCall = async () => {
+    let guestData = await axios(`https://salty-taiga-76954.herokuapp.com/households/${banana}/guests`)
+    setAllGuests(guestData.data)
+
+  }
 
   // let orderCall = async () => {
   //   let orderData = await axios('https://salty-taiga-76954.herokuapp.com/orders')
@@ -48,13 +53,10 @@ export default function App() {
   let checkAccess = async () => {
     let code = localStorage.getItem("banana")
     if (code) {
-      let householdData = await axios(`https://salty-taiga-76954.herokuapp.com/households/`)
-      console.log(householdData, "house data here")
-      await setHouseholds(householdData.data)
       await setBanana(code)
-      console.log("here", households, "code", code)
-      setCurrentHouse(householdData.data[code - 1])
-      setToMain(true)
+      let householdData = await axios(`https://salty-taiga-76954.herokuapp.com/households/`)
+      setHouseholds(householdData.data)
+      await setCurrentHouse(householdData.data[code - 1])
     }
   }
 
@@ -63,13 +65,14 @@ export default function App() {
     let allCalls = async () => {
       await photoCall()
       await checkAccess()
-      // await householdCall()
+      await householdCall()
+      // allGuestCall()
       // await guestCall()
       // orderCall()
     }
-    setIsLoading(true)
+    // setIsLoading(true)
     allCalls()
-    setIsLoading(false)
+    // setIsLoading(false)
 
   }, [])
 
@@ -88,7 +91,8 @@ export default function App() {
       setHouseholds={setHouseholds}
       currentHouse={currentHouse}
       setCurrentHouse={setCurrentHouse}
-      guests={guests}
+      allGuests={allGuests}
+      setAllGuests={setAllGuests}
       photos={photos}
       setPhotos={setPhotos}
       banana={banana}
@@ -96,7 +100,8 @@ export default function App() {
       toMain={toMain}
       setToMain={setToMain}
       isLoading={isLoading}
-      setIsLoading={setIsLoading} />
+      setIsLoading={setIsLoading}
+    />
 
 
 
