@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useReducer } from 'react'
+import { withRouter } from 'react-router-dom'
 import '../css/singleguest.scss'
 import { editGuest, deleteGuest } from '../../services/ApiHelper'
 
-export default function SingleGuest({ currentHouse, guest,
+function SingleGuest({ currentHouse, guest,
   allGuests, setAllGuests }) {
 
 
@@ -96,3 +97,4 @@ export default function SingleGuest({ currentHouse, guest,
   </div>
 }
 
+export default withRouter(SingleGuest)

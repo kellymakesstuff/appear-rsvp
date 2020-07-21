@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Link, Route, withRouter } from 'react-router-dom'
 import Gallery from 'react-photo-gallery'
 import { addPhoto } from '../../services/ApiHelper'
 
-export default function AddPhoto({ banana, photos, setPhotos, isLoading, setIsLoading }) {
+function AddPhoto({ banana, photos, setPhotos, isLoading, setIsLoading }) {
 
   console.log("banana in addphoto", banana)
   console.log("photos in addphoto", photos)
@@ -71,3 +71,6 @@ export default function AddPhoto({ banana, photos, setPhotos, isLoading, setIsLo
   </>
 
 }
+
+
+export default withRouter(AddPhoto)

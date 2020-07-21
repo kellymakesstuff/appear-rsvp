@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Link, Route, withRouter } from 'react-router-dom'
 import Gallery from 'react-photo-gallery';
 import '../css/gallerybox.scss'
 
-export default function GalleryBox({ photos }) {
+function GalleryBox({ photos }) {
 
   console.log("photos in gallerybox", photos)
 
@@ -17,3 +17,5 @@ export default function GalleryBox({ photos }) {
     </div>
   </>
 }
+
+export default withRouter(GalleryBox)

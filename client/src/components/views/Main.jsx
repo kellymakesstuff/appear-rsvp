@@ -1,19 +1,19 @@
 import React from 'react'
-import { Link, Route, useParams } from 'react-router-dom'
+import { Link, Route, withRouter } from 'react-router-dom'
 import AccessCode from './AccessCode'
 import GalleryBox from '../functional/GalleryBox'
 import AddPhoto from '../functional/AddPhoto'
 import RSVP from '../views/RSVP'
 
 
-export default function Main(
+function Main(
   { households, setHouseholds,
     currentHouse, setCurrentHouse,
     allGuests, setAllGuests,
     photos, setPhotos,
     banana, setBanana,
     toMain, setToMain,
-    isLoading, setIsLoading }) {
+    isLoading, setIsLoading }, props) {
 
   console.log("households", households)
   console.log("photos", photos)
@@ -52,7 +52,8 @@ export default function Main(
         photos={photos}
         setPhotos={setPhotos}
         allGuests={allGuests}
-        setAllGuests={setAllGuests} />
+        setAllGuests={setAllGuests}
+        props={props} />
     </Route>
 
     <Route path="/addphoto">
@@ -66,3 +67,5 @@ export default function Main(
 
   </>
 }
+
+export default withRouter(Main)
