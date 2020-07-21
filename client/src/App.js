@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Route } from 'react-router-dom'
+import { Link, Route, withRouter } from 'react-router-dom'
 import './App.css';
 import axios from 'axios'
 import api from './services/apiconfig'
 import Header from './components/shared/Header'
 import Main from './components/views/Main'
 
-export default function App() {
+function App({ match }) {
   // States with all-data
   let [households, setHouseholds] = useState([])
   let [allGuests, setAllGuests] = useState([])
@@ -33,7 +33,7 @@ export default function App() {
   }
 
   let allGuestCall = async () => {
-    let guestData = await axios(`https://salty-taiga-76954.herokuapp.com/households/${banana}/guests`)
+    let guestData = await axios(`https://salty-taiga-76954.herokuapp.com/households/${match.params.banana}/guests`)
     setAllGuests(guestData.data)
 
   }
@@ -52,7 +52,13 @@ export default function App() {
 
   let checkAccess = async () => {
     let code = localStorage.getItem("banana")
-    if (code) {
+    let paramSet = match.params.banana
+    if (paramSet) {
+      await setBanana(paramSet)
+      let householdData = await axios(`https://salty-taiga-76954.herokuapp.com/households/`)
+      setHouseholds(householdData.data)
+      await setCurrentHouse(householdData.data[paramSet - 1])
+    } else if (!paramSet && code) {
       await setBanana(code)
       let householdData = await axios(`https://salty-taiga-76954.herokuapp.com/households/`)
       setHouseholds(householdData.data)
@@ -107,3 +113,5 @@ export default function App() {
 
   </>
 }
+
+export default withRouter(App)

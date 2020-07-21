@@ -6,7 +6,8 @@ import { withRouter } from 'react-router-dom'
 
 function RSVP({ households,
   currentHouse, setCurrentHouse,
-  banana, photos, setPhotos,
+  banana, setBanana,
+  photos, setPhotos,
   allGuests, setAllGuests,
   isLoading, setIsLoading, match }) {
 
@@ -17,6 +18,15 @@ function RSVP({ households,
   console.log("params", match.params.banana)
 
   // let [allGuests, setAllGuests] = useState([])
+
+  localStorage.setItem("banana", match.params.banana)
+  setBanana(match.params.banana)
+
+
+  // let householdCall = async () => {
+  //   await axios(`https://salty-taiga-76954.herokuapp.com/households/`)
+  //   setHouseholds(householdData.data)
+  // }
 
 
   let allGuestCall = async () => {

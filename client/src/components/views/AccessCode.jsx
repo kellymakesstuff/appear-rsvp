@@ -12,9 +12,11 @@ function AccessCode({
   console.log("banana", banana, setCurrentHouse)
 
   let handleBanana = (e) => {
+    setCurrentHouse(null)
     let code = e.target.value
     setBanana(code)
     localStorage.setItem("banana", code)
+
   }
 
   let allGuestCall = async () => {
@@ -25,9 +27,10 @@ function AccessCode({
 
   let handleGuests = () => {
     setCurrentHouse(households[banana - 1])
-    allGuestCall()
+    // allGuestCall()
     setToMain(true)
   }
+
 
   return <>
     {toMain ? <Redirect to={`/household/${banana}`} /> : null}
