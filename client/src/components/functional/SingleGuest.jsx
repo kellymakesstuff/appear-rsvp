@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useReducer } from 'react'
 import '../css/singleguest.scss'
-import { editGuest } from '../../services/ApiHelper'
+import { editGuest, deleteGuest } from '../../services/ApiHelper'
 
 export default function SingleGuest({ currentHouse, guest,
   allGuests, setAllGuests }) {
@@ -42,6 +42,12 @@ export default function SingleGuest({ currentHouse, guest,
     setEditToggle(null)
   }
 
+  let handleDelete = () => {
+    let lookupId = guest.id
+    deleteGuest(lookupId)
+    setEditToggle(null)
+  }
+
   let openFields = () => {
     if (editToggle) {
       return <div className="singleGuest">
@@ -56,7 +62,7 @@ export default function SingleGuest({ currentHouse, guest,
         <input name="under10" value={guest.under10} type="checkbox" value="true" onChange={(e) => handleEdit(e)} />
 
         <button onClick={() => handleSubmit()}>Submit</button>
-
+        <button onClick={() => handleDelete()}>Delete</button>
 
       </div >
     } else {

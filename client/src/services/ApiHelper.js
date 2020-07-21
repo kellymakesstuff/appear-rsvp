@@ -21,6 +21,12 @@ export const editGuest = async (id, guestInfo) => {
   return response.data
 }
 
+export const deleteGuest = async (id) => {
+  const response = await api.delete(`/guests/${id}`)
+  return response.data
+  console.log(response.data)
+}
+
 export const addPhoto = async (photoData) => {
   const response = await api.post('/photos', { photo: photoData })
   return response.data
