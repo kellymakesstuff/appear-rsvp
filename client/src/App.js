@@ -19,6 +19,7 @@ export default function App() {
 
   //redirects
   let [toMain, setToMain] = useState(false)
+  let [isLoading, setIsLoading] = useState(false)
 
   let householdCall = async () => {
     // if (banana) {
@@ -60,15 +61,15 @@ export default function App() {
 
   useEffect(() => {
     let allCalls = async () => {
+      await photoCall()
       await checkAccess()
       // await householdCall()
       // await guestCall()
       // orderCall()
-      await photoCall()
-
-
     }
+    setIsLoading(true)
     allCalls()
+    setIsLoading(false)
 
   }, [])
 
@@ -89,10 +90,15 @@ export default function App() {
       setCurrentHouse={setCurrentHouse}
       guests={guests}
       photos={photos}
+      setPhotos={setPhotos}
       banana={banana}
       setBanana={setBanana}
       toMain={toMain}
-      setToMain={setToMain} />
+      setToMain={setToMain}
+      isLoading={isLoading}
+      setIsLoading={setIsLoading} />
+
+
 
   </>
 }

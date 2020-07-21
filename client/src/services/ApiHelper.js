@@ -16,6 +16,17 @@ export const addGuest = async (id, guestInfo) => {
   return response.data
 }
 
+export const editGuest = async (id, guestInfo) => {
+  const response = await api.patch(`/guests/${id}`, { guest: guestInfo })
+  return response.data
+}
+
+export const deleteGuest = async (id) => {
+  const response = await api.delete(`/guests/${id}`)
+  return response.data
+  console.log(response.data)
+}
+
 export const addPhoto = async (photoData) => {
   const response = await api.post('/photos', { photo: photoData })
   return response.data

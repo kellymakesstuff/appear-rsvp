@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import SingleGuest from '../functional/SingleGuest'
 import axios from 'axios'
+import AddPhoto from '../functional/AddPhoto'
 
-export default function RSVP({ households, currentHouse, setCurrentHouse, banana }) {
+export default function RSVP({ households,
+  currentHouse, setCurrentHouse,
+  banana, photos, setPhotos,
+  isLoading, setIsLoading }) {
 
   // console.log("currentHouse in RSVP", currentHouse.id)
 
   let [allGuests, setAllGuests] = useState([])
 
-  let allGuestCall = async (bana) => {
+
+  let allGuestCall = async () => {
     let guestData = await axios(`https://salty-taiga-76954.herokuapp.com/households/${banana}/guests`)
     setAllGuests(guestData.data)
 
@@ -36,9 +41,16 @@ export default function RSVP({ households, currentHouse, setCurrentHouse, banana
         </div>}
 
 
-      {allGuests && allGuests.map(guest => <SingleGuest guest={guest} />)}
+      {allGuests && allGuests.map(guest => <SingleGuest guest={guest}
+        allGuests={allGuests} setAllGuests={setAllGuests}
+      />)}
 
-
+      {/* {allGuests && <AddPhoto
+        banana={banana}
+        photos={photos}
+        setPhotos={setPhotos}
+        isLoading={isLoading}
+        setIsLoading={setIsLoading} />} */}
 
 
     </div>
