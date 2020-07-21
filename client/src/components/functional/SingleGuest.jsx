@@ -96,27 +96,3 @@ export default function SingleGuest({ currentHouse, guest,
   </div>
 }
 
-
-//// toggle edit or <h2>
-// create state here to hold guest info
-// write handle change to edit state here
-// write a function in app to edit guest, put/post, and get current household 
-
-
-
-// let handleEdit = (e) => {
-//   // console.log(e.target)
-
-//   // const { name, value } = e.target
-//   // let midEdit = {
-//   //   first_name: value,
-//   //   surname: value
-//   // }
-//   // // setSingleGuest({
-//   // //   singleGuest,
-//   // //   [name]: value
-//   // // })
-//   console.log("singleGuest", singleGuest)
-//   console.log("midEdit", midEdit)
-
-// }
