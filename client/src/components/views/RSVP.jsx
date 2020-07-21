@@ -25,9 +25,7 @@ export default function RSVP({ households,
   }
 
   useEffect(() => {
-    if (banana) {
-      allGuestCall()
-    }
+    allGuestCall()
 
   }, [])
 
