@@ -1,7 +1,7 @@
-Household.destroy_all
-Guest.destroy_all
-Order.destroy_all
-Photo.destroy_all
+Households.destroy_all
+Guests.destroy_all
+Orders.destroy_all
+Photos.destroy_all
 
 @alvarez=Household.create!(surname:'Alvarez', guest_count:2, address1:'304 Park St', address2:'', city:'Clover', state:'SC', zip:29710, country:'US')
 @assam=Household.create!(surname:'Assam', guest_count:2, address1:'2 Main Rd', address2:'', city:'Glendale', state:'AZ', zip:85303, country:'US')
