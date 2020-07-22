@@ -17,8 +17,9 @@ function Header({ setToMain, banana, currentHouse, setCurrentHouse }) {
 
       </div>
       <div className="headerLinks">
-        <Link to="/accesscode" onClick={() => setToMain(false)}>Access Code</Link>
+        <Link to="/accesscode" onClick={() => setToMain(false)}>Access your Invite</Link>
         {currentHouse && <Link to={`/household/${banana}`}> || Welcome, {currentHouse.surname} family</Link>}
+        {currentHouse && <Link to="/addphoto"> || Add Photos</Link>}
       </div>
 
     </div>

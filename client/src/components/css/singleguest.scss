@@ -3,10 +3,12 @@
 .singleGuest {
   display: flex;
   flex-direction: column;
-  border: solid $purple_med;
-  padding: 9px;
-  @include shadow; 
+  @include purple-box;
 
+}
+
+.guestDeleted {
+@include orange-low-box;
 }
 
 .guestBox {
@@ -23,4 +25,8 @@
 .allGuestsBox {
   display: flex;
   justify-content: space-around;
+}
+
+.rightText {
+  text-align: right;
 }

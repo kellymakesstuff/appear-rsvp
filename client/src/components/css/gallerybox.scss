@@ -2,8 +2,34 @@
 
 .fullGalleryBox {
 margin: 0 auto;
-padding: 20px 20px 20px 20px;
 width: 60%;
-border: solid $orange_hi;
-@include shadow;
+@include orange-hi-box;
+}
+
+.photoTitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.addedPhotoBox {
+  margin: 0 auto;
+  width: 50%;
+  @include orange-med-box;
+}
+
+.existingPhotoBox {
+  margin: 0 auto;
+  width: 50%;
+  @include orange-low-box;
+}
+
+.existingPhotoButtonBox {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+img {
+  height: 10%;
 }

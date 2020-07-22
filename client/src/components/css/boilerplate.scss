@@ -19,13 +19,65 @@ $main_font: 'Mulish', sans-serif;
   text-align: center;
 }
 
-p, a, h1, h2, input, label {
+@mixin purple-box {
+  border: solid $purple_med;
+  padding: 20px;
+  @include shadow; 
+}
+
+@mixin orange-hi-box {
+  border: solid $orange_hi;
+  padding: 20px;
+  @include shadow; 
+}
+
+@mixin orange-low-box {
+  border: solid $orange_low;
+  padding: 20px;
+  @include shadow; 
+}
+
+@mixin orange-med-box {
+  border: solid $orange_med;
+  padding: 20px;
+  @include shadow; 
+}
+
+a, h1, h2 {
   @include all-text
 }
 
-// h1 {
-//   text-size: 
-// }
+p, input, label {
+  @include all-text;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-family: $main_font;
+  font-style: italic;
+  margin: 20px;
+}
+
+.inviteBox {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+// ipad
+@media only screen and (max-width: 600px){
+
+}
+
+// iphone
+@media only screen and (max-width: 600px){
+  
+}
+
 
 
 // https://www.w3schools.com/css/css3_shadows_box.asp

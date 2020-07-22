@@ -33,24 +33,28 @@ function RSVP({ households,
 
 
       {currentHouse &&
-        <div>
-          <h1>The {currentHouse.surname} Family</h1>
-          <h2>{currentHouse.address1}</h2>
-          <h2>{currentHouse.address2}</h2>
-          <h2>{currentHouse.city}, {currentHouse.state} {currentHouse.zip}</h2>
-          <h2>Guest Count: {currentHouse.guest_count}</h2>
-          <h2>Currently Registered Guests: {currentHouse.guests.length}</h2>
+        <div className="rightText">
+          <h3>Guest Count: {currentHouse.guest_count}</h3>
+          <h3>Currently Registered Guests: {currentHouse.guests.length}</h3>
+          <div>
+            <h1>The {currentHouse.surname} Family</h1>
+            <h2>{currentHouse.address1}</h2>
+            <h2>{currentHouse.address2}</h2>
+            <h2>{currentHouse.city}, {currentHouse.state} {currentHouse.zip}</h2>
+            <br />
+
+          </div>
         </div>}
 
 
-      {/* <div className="allGuestsBox"> */}
-      {allGuests && allGuests.map(guest =>
-        <SingleGuest
-          guest={guest}
-          allGuests={allGuests}
-          setAllGuests={setAllGuests}
-          currentHouse={currentHouse} />)}
-      {/* </div> */}
+      <div className="allGuestsBox">
+        {allGuests && allGuests.map(guest =>
+          <SingleGuest
+            guest={guest}
+            allGuests={allGuests}
+            setAllGuests={setAllGuests}
+            currentHouse={currentHouse} />)}
+      </div>
 
       {/* {allGuests && <AddPhoto
         banana={banana}
@@ -60,7 +64,7 @@ function RSVP({ households,
         setIsLoading={setIsLoading} />} */}
 
 
-    </div>
+    </div >
   )
 }
 

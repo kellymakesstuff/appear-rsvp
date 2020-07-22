@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, Route, withRouter } from 'react-router-dom'
 import Gallery from 'react-photo-gallery'
 import { addPhoto } from '../../services/ApiHelper'
+import '../css/gallerybox.scss'
 
 function AddPhoto({ banana, photos, setPhotos, isLoading, setIsLoading }) {
 
@@ -49,24 +50,33 @@ function AddPhoto({ banana, photos, setPhotos, isLoading, setIsLoading }) {
 
   return <>
     <div>
-      <h1>photosss</h1>
-      <form>
-        <input type="text" onChange={(e) => handleNewPhoto(e.target.value)} />
-      </form>
-      <button onClick={() => submitNewPhoto()}>add photo</button>
-      <Link to="/">Back to Gallery</Link>
+      <div className="photoTitle">
+        <h1>Add Photos</h1>
+        <h3>include your favorite photos with the happy couple!</h3>
+        <form>
+          <input type="text" placeholder="photo url" onChange={(e) => handleNewPhoto(e.target.value)} />
+        </form>
+        <button onClick={() => submitNewPhoto()}>add photo</button>
+        <Link to="/" type="button">Back to Gallery</Link>
 
-      {newPhoto.src && <img src={newPhoto.src} />}
-
-      <Gallery photos={existing} />
+      </div>
 
 
-      {existing.map(photo =>
-        <div>
-          <button key={photo.height}>Edit</button>
-          <button key={photo.width}>Delete</button>
-        </div>)}
+      {newPhoto.src && <div className="addedPhotoBox">
+        <img src={newPhoto.src} /></div>}
 
+
+      <div className="existingPhotoBox">
+        <Gallery photos={existing} />
+      </div>
+
+      <div className="existingPhotoButtonBox">
+        {existing.map(photo =>
+          <div>
+            <button key={photo.height}>Edit</button>
+            <button key={photo.width}>Delete</button>
+          </div>)}
+      </div>
     </div>
   </>
 

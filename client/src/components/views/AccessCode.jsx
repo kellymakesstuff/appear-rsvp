@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Redirect, withRouter } from 'react-router-dom'
 import axios from 'axios'
+import '../css/boilerplate.scss'
 
 function AccessCode({
   households, setHouseholds,
@@ -35,11 +36,12 @@ function AccessCode({
 
   return <>
     {toMain ? <Redirect to={`/household/${banana}`} /> : null}
-    <div>
-      <h1>access code</h1>
+    <div className="inviteBox">
+      <h1>Access your Invite</h1>
+      <h2>Input the invite code found on your invitation</h2>
       <form onSubmit={() => handleGuests()}>
-        <input type="text" onChange={e => handleBanana(e)} />
-        <input type="submit" />
+        <input type="text" placeholder="invite code" onChange={e => handleBanana(e)} />
+        <input type="submit" value="submit" />
       </form>
     </div>
   </>
