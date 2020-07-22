@@ -1,5 +1,37 @@
 @import './boilerplate.scss';
 
+// iphone
+@media only screen and (max-width: $break-small){
+
+  .headerImgBox {
+    display: flex;
+  height:40%;
+  width:40%;
+  margin:0px;
+  }
+
+  link {
+    font-size: 10px;
+  }
+
+  .headerImg {
+    height: 30px;
+    width: 40px;
+    margin-bottom: 0px;
+  }
+
+  .headerLinks {
+    text-align: right;
+    margin: 0px;
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+    }
+  }
+}
+
+
 .headerImgBox {
   display: flex;
 height: 20%;

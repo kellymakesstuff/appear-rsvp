@@ -30,3 +30,33 @@
 .rightText {
   text-align: right;
 }
+
+@media only screen and (max-width: $break-small){
+  .allGuestsBox {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+ 
+  .allGuestsBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+}
+
+@media only screen and (max-width: $break-med){
+  .allGuestsBox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+ 
+  .allGuestsBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+}
