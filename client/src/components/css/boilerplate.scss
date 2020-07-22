@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+$break-small: 400px;
+$break-med: 1100px;
+
 $orange_hi: #FB931C;
 $orange_med: #F97A28;
 $orange_low: #F55049;
@@ -5,10 +10,111 @@ $pink_hi: #F20064;
 $purple_med: #EA3C6F;
 $purple_low: #DC249D;
 
+$main_font: 'Mulish', sans-serif;
+
 @mixin shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 } 
+
+@mixin all-text {
+  font-family: $main_font;
+  text-align: center;
+}
+
+@mixin purple-box {
+  border: solid $purple_med;
+  padding: 20px;
+  @include shadow; 
+}
+
+@mixin orange-hi-box {
+  border: solid $orange_hi;
+  padding: 20px;
+  @include shadow; 
+}
+
+@mixin orange-low-box {
+  border: solid $orange_low;
+  padding: 20px;
+  @include shadow; 
+}
+
+@mixin orange-med-box {
+  border: solid $orange_med;
+  padding: 20px;
+  @include shadow; 
+}
+
+a, h1, h2 {
+  @include all-text
+}
+
+p, input, label {
+  @include all-text;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-family: $main_font;
+  font-style: italic;
+  margin: 20px;
+}
+
+.inviteBox {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+// ipad
+@media only screen and (max-width: $break-med){
+  p, input, label {
+    @include all-text;
+    font-size: 20px;
+  }
+  
+  h1 {
+    font-size: 50px;
+  }
+  
+  h3 {
+    font-family: $main_font;
+    font-style: italic;
+    margin: 20px;
+  }
+}
+
+// iphone
+@media only screen and (max-width: $break-small){
+  p, input, label {
+    @include all-text;
+    font-size: 15px;
+  }
+  
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+  font-size: 15px;
+  }
+  
+  h3 {
+    font-family: $main_font;
+    font-style: italic;
+    margin: 15px;
+    font-size: 13px;
+  }
+
+  a {
+    font-size: 11px;
+  }
+}
 
 
 

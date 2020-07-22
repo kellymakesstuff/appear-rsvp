@@ -13,7 +13,7 @@ function Main(
     photos, setPhotos,
     banana, setBanana,
     toMain, setToMain,
-    isLoading, setIsLoading }, props) {
+    isLoading, setIsLoading, match }) {
 
   console.log("households", households)
   console.log("photos", photos)
@@ -53,7 +53,8 @@ function Main(
         setPhotos={setPhotos}
         allGuests={allGuests}
         setAllGuests={setAllGuests}
-        props={props} />
+        match={match}
+      />
     </Route>
 
     <Route path="/addphoto">

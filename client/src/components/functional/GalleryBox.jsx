@@ -11,7 +11,8 @@ function GalleryBox({ photos }) {
 
 
   return <>
-    <Link to="/addphoto"><h2>add photo</h2></Link>
+    <h1>Welcome to Jackie and Wilson's Wedding</h1>
+    <h2>Access your household above to RSVP</h2>
     <div className="fullGalleryBox">
       <Gallery photos={photos} />
     </div>

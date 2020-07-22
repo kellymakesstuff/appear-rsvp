@@ -10,15 +10,16 @@ function Header({ setToMain, banana, currentHouse, setCurrentHouse }) {
   console.log("currentHouse in Header", currentHouse, setCurrentHouse)
 
   return <>
-
     <div className="headerBox">
+      <div className="headerImgBox">
 
-      <img className="headerImg" src={HeadCut} alt="APPEAR" />
+        <Link to="/" exact><img className="headerImg" src={HeadCut} alt="APPEAR" /></Link>
 
-
+      </div>
       <div className="headerLinks">
-        <Link to="/accesscode" onClick={() => setToMain(false)}>Access Code</Link>
+        <Link to="/accesscode" onClick={() => setToMain(false)}>Access your Invite</Link>
         {currentHouse && <Link to={`/household/${banana}`}> || Welcome, {currentHouse.surname} family</Link>}
+        {currentHouse && <Link to="/addphoto"> || Add Photos</Link>}
       </div>
 
     </div>
