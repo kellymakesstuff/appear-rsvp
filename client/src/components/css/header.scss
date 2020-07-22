@@ -1,9 +1,18 @@
 @import './boilerplate.scss';
 
+.headerImgBox {
+  display: flex;
+height: 20%;
+width:20%;
+margin:0px;
+
+  
+}
+
 .headerImg {
-  background-color: $pink_hi;
-  height: 20%;
-  width: 20%
+  height: 100%;
+  width: 100%;
+  margin-bottom: 0px;
 }
 
 .headerBox {
@@ -12,13 +21,13 @@
   justify-self: flex-end;
   background-color: $pink_hi;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   @include shadow;
 }
 
 .headerLinks {
   text-align: right;
-  
+  margin: 0px;
   a {
     color: white;
     text-decoration: none;

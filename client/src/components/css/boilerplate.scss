@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
 $orange_hi: #FB931C;
 $orange_med: #F97A28;
 $orange_low: #F55049;
@@ -5,11 +7,25 @@ $pink_hi: #F20064;
 $purple_med: #EA3C6F;
 $purple_low: #DC249D;
 
+$main_font: 'Mulish', sans-serif;
+
 @mixin shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 } 
 
+@mixin all-text {
+  font-family: $main_font;
+  text-align: center;
+}
+
+p, a, h1, h2, input, label {
+  @include all-text
+}
+
+// h1 {
+//   text-size: 
+// }
 
 
 // https://www.w3schools.com/css/css3_shadows_box.asp

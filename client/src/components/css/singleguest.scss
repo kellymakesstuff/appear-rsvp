@@ -3,6 +3,9 @@
 .singleGuest {
   display: flex;
   flex-direction: column;
+  border: solid $purple_med;
+  padding: 9px;
+  @include shadow; 
 
 }
 
@@ -15,4 +18,9 @@
 .box {
   display: flex;
   flex-flow: row wrap;
+}
+
+.allGuestsBox {
+  display: flex;
+  justify-content: space-around;
 }

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRouteMatch } from 'react';
 import { Link, Route, withRouter } from 'react-router-dom'
-import './App.css';
+import '../src/components/css/boilerplate.scss';
 import axios from 'axios'
 import api from './services/apiconfig'
 import Header from './components/shared/Header'
 import Main from './components/views/Main'
+
 
 function App({ match }) {
   // States with all-data
@@ -107,6 +108,7 @@ function App({ match }) {
       setToMain={setToMain}
       isLoading={isLoading}
       setIsLoading={setIsLoading}
+      match={match}
     />
 
 

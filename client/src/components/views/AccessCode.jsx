@@ -10,9 +10,9 @@ function AccessCode({
   allGuests, setAllGuests }) {
 
   console.log("banana", banana, setCurrentHouse)
+  // const [, forceUpdate] = useReducer(x => x + 1, 0);
 
   let handleBanana = (e) => {
-    setCurrentHouse(null)
     let code = e.target.value
     setBanana(code)
     localStorage.setItem("banana", code)
@@ -27,7 +27,8 @@ function AccessCode({
 
   let handleGuests = () => {
     setCurrentHouse(households[banana - 1])
-    // allGuestCall()
+    allGuestCall()
+    // forceUpdate()
     setToMain(true)
   }
 
