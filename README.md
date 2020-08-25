@@ -23,7 +23,8 @@
 
 See it so far: [http://appear.surge.sh](http://appear.surge.sh)
 <br>Use access code "3" to try it out!
-OR try the QR code! 
+<br>OR
+<br>try the QR code! 
 <br>
 ![APPEAR QR code](https://i.imgur.com/pusvTh6.png)
 
