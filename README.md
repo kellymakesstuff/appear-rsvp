@@ -26,7 +26,7 @@ See it so far: [http://appear.surge.sh](http://appear.surge.sh)
 <br>OR
 <br>try the QR code! 
 <br>
-![APPEAR QR code](https://i.imgur.com/pusvTh6.png)
+![APPEAR QR code](https://i.imgur.com/fvzQ6An.png)
 
 
 <br>
